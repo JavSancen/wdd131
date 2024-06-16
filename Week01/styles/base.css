@@ -21,7 +21,7 @@ body .container {
 .title-container {
     height: 14vh;
     align-content: center;
-    background-color: rgb(247, 198, 39);
+    background-color: #FF9F66;
     text-align: center;
     grid-column-start: 1;
     grid-column-end: 4;
@@ -36,16 +36,17 @@ body .container {
 
 .title-header-spam {
     font-weight: 400;
-    color: azure;
-    font-size: 26px;
+    color: #002379;
+    font-size: 24px;
+    font-weight: 600;
 }
 
 .menu-container {
     text-decoration: none;
     height: 8vh;
     align-items: center;
-    color: aliceblue;
-    background-color: rgb(80, 73, 73);
+    color: #002379;
+    background-color: #FF5F00;
     grid-column-start: 1;
     grid-column-end: 4;
     grid-row-start: 2;
@@ -53,12 +54,13 @@ body .container {
 }
 
 .menu-container a {
-    color: azure;
+    color: #002379;
     font-size: 20px;
+    font-weight: 600;
 }
 
 .menu-container :hover {
-    color: rgb(245, 223, 30);
+    color: azure;
     font-size: 20px;
 }
 
@@ -97,11 +99,12 @@ a {
 }
 
 .about-title {
+    color: azure;
     text-align: center;
     align-items: center;
     padding-top: 4%;
     padding-bottom: 4%;
-    background-color: rgba(0, 0, 255, 0.822);
+    background-color: #002379;
     border-radius: 20px 20px 0 0;
 }
 
@@ -110,11 +113,12 @@ a {
 }
 
 .web-title {
+    color: azure;
     text-align: center;
     align-items: center;
     padding-top: 11%;
     padding-bottom: 11%;
-    background-color: rgba(0, 0, 255, 0.822);
+    background-color: #002379;
     border-radius: 20px 20px 0 0;
 }
 
@@ -194,7 +198,7 @@ hr {
 
 .footer-container {
     font-size: 18px;
-    background-color: rgb(247, 198, 39);
+    background-color:#FFFAE6;
     align-content: center;
     text-align: center;
     height: 15vh;
@@ -203,3 +207,6 @@ hr {
     grid-row-start: 4;
     grid-row-end: 5;
 }
+
+
+
