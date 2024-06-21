@@ -5,7 +5,7 @@
 }
 
 header, footer {
-    background-color: #3c0a64 ;
+    background-color: #3c0a64;
     color: rgb(240, 240, 240);
 }
 
@@ -38,8 +38,7 @@ img {
     margin: .5rem;
 }
 
-/*mobile*/
-
+/* Mobile */
 header {
     display: grid;
     grid-gap: 1rem;
@@ -56,9 +55,32 @@ h1 {
     font-size: 2rem;
 }
 
+/* Small view navigation */
+#menu {
+    font-size: 1.5rem;
+    border: 0;
+    background: none;
+    color: #000;
+    position: absolute; /* Adjust this as needed for your layout */
+    top: 20px; /* Adjust this as needed for your layout */
+    right: 20px; /* Adjust this as needed for your layout */
+}
+
+#menu::before {
+    content: "☰";
+}
+
+#menu.open::before {
+    content: "❎";
+}
+
 nav {
-    display: flex;
-    flex-direction: column;
+    display: none; /* Initially hide the navigation menu */
+}
+
+nav.show {
+    display: flex; /* Show the navigation menu when the 'show' class is added */
+    flex-direction: row; /* Ensure flex-direction is row for small screens */
 }
 
 nav a {
@@ -72,9 +94,13 @@ nav a:hover {
     text-decoration: underline;
 }
 
+footer {
+    text-align: center;
+    height: 10vh;
+    align-content: center;
+}
 
-/*Larger View*/
-
+/* Larger View */
 @media (min-width: 740px) {
     header {
         display: flex;
@@ -82,13 +108,18 @@ nav a:hover {
         justify-content: space-between;
     }
 
+    #menu {
+        display: none; /* Hide hamburger button */
+    }
+
     nav {
+        display: flex; /* Always display navigation for larger screens */
+        flex-direction: row; /* Ensure flex-direction is row for larger screens */
         justify-content: flex-end;
-        flex-direction: row;
     }
 
     nav a {
-        flex: 1 1 100%;
+        flex: 1 1 auto;
     }
 
     .container {
