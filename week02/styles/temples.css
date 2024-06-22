@@ -83,7 +83,7 @@ h1 {
 
 nav {
     display: none;
-    flex-direction: column; /* Set initial flex direction to column for small view */
+    flex-direction: column;
 }
 
 nav.show {
