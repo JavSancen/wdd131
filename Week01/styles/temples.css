@@ -33,6 +33,11 @@ span {
     place-items: center;
 }
 
+main h2 {
+    margin-top: 4%;
+    margin-bottom: 4%;
+}
+
 img {
     width: 100%;
     height: auto;
@@ -68,6 +73,7 @@ h1 {
 
 #menu::before {
     content: "☰";
+    color: rgb(240, 240, 240);
 }
 
 #menu.open::before {
