@@ -1,7 +1,12 @@
+/* General Styles */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+}
+
+body {
+    font-family: Roboto, sans-serif;
 }
 
 header, footer {
@@ -15,10 +20,6 @@ header a {
 
 a {
     text-decoration: none;
-}
-
-body {
-    font-family: Roboto, sans-serif;
 }
 
 span {
@@ -38,7 +39,7 @@ img {
     margin: .5rem;
 }
 
-/* Mobile */
+/* Mobile View */
 header {
     display: grid;
     grid-gap: 1rem;
@@ -55,15 +56,14 @@ h1 {
     font-size: 2rem;
 }
 
-/* Small view navigation */
 #menu {
     font-size: 1.5rem;
     border: 0;
     background: none;
     color: #000;
-    position: absolute; /* Adjust this as needed for your layout */
-    top: 20px; /* Adjust this as needed for your layout */
-    right: 20px; /* Adjust this as needed for your layout */
+    position: absolute;
+    top: 20px;
+    right: 20px;
 }
 
 #menu::before {
@@ -75,19 +75,18 @@ h1 {
 }
 
 nav {
-    display: none; /* Initially hide the navigation menu */
+    display: none;
+    flex-direction: column; /* Set initial flex direction to column for small view */
 }
 
 nav.show {
-    display: flex; /* Show the navigation menu when the 'show' class is added */
-    flex-direction: row; /* Ensure flex-direction is row for small screens */
+    display: flex;
 }
 
 nav a {
     display: block;
     text-align: center;
     padding: 1rem;
-    text-decoration: none;
 }
 
 nav a:hover {
@@ -109,12 +108,12 @@ footer {
     }
 
     #menu {
-        display: none; /* Hide hamburger button */
+        display: none;
     }
 
     nav {
-        display: flex; /* Always display navigation for larger screens */
-        flex-direction: row; /* Ensure flex-direction is row for larger screens */
+        display: flex;
+        flex-direction: row;
         justify-content: flex-end;
     }
 

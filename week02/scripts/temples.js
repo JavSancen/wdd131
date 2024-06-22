@@ -7,9 +7,9 @@ document.addEventListener('DOMContentLoaded', () => {
             navigation.classList.toggle('show');
             hamButton.classList.toggle('open');
 
-            // Ensure the navigation is in row direction when shown
+            // Ensure the navigation is in column direction when shown
             if (navigation.classList.contains('show')) {
-                navigation.style.flexDirection = 'row';
+                navigation.style.flexDirection = 'column';
             } else {
                 navigation.style.flexDirection = ''; // Reset the flex direction when hiding
             }
