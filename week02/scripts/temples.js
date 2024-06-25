@@ -6,7 +6,6 @@ document.addEventListener('DOMContentLoaded', () => {
         hamButton.addEventListener('click', () => {
             navigation.classList.toggle('show');
             hamButton.classList.toggle('open');
-
             // Ensure the navigation is in column direction when shown
             if (navigation.classList.contains('show')) {
                 navigation.style.flexDirection = 'column';
@@ -19,9 +18,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 });
 
-
-
-document.addEventListener('DOMContentLoaded', (event) => {
+document.addEventListener('DOMContentLoaded', () => {
     // Get current year
     const currentYear = new Date().getFullYear();
     document.getElementById('currentyear').textContent = currentYear;
