@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WDD 131 - Media Query Example</title>
+    <meta name="description" content="A collection of temple images.">
+    <meta name="author" content="Francisco J. Zuñiga S.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto&display=swap">
+    <link rel="stylesheet" href="styles/place.css">
+    <link rel="stylesheet" href="styles/place-large.css">
+    <script defer src="scripts/place.js"></script>
+</head>
+<body>
+    <header>
+        <h1>Country name</h1>
+    </header>
+    <main>
+        <div class="hero">
+            <picture>
+                <source srcset="images/tx-large.webp" media="(min-width: 1000px)">
+
+            </picture>
+        </div>
+    </main>
+    <footer>
+        <div class="footer-container">
+            <p> <span id="currentyear"></span> 🌵 Francisco J. Zuñiga S. - México 🌵 </p>
+            <p>Last modification: <span id="date-and-time"></span></p>
+        </div>
+    </footer>
+</body>
+</html>
