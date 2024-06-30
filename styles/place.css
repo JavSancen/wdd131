@@ -1,10 +1,100 @@
+/* place-small.css */
+
+/* Basic reset and font styling */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+body {
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+}
+
+/* Header styling */
+header.country {
+    height: 20vh;
+    background-color: #006341; /* Beautiful Mexican green */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-align: center;
+}
+
+/* Aligning data and weather classes to the center */
+.data, .weather {
+    text-align: center;
+    margin: 20px auto;
+    width: 90%;
+}
+
+/* Making text bold in p tags within main */
+main p {
+    font-weight: bold;
+    line-height: 1.04; /* Adding 4% space between lines */
+    margin-bottom: 1%; /* Adding 1% space between each p and span */
+}
+
+/* Adding space between h1 and other elements */
+main h1 {
+    margin-bottom: 8%; /* Adding 8% space after h1 */
+}
+
+/* Styling for hero image */
+.hero {
+    text-align: center;
+}
+
 .hero img {
+    max-width: 100%;
     width: 100%;
     height: auto;
+}
+
+/* Styling for icon image */
+img.icon {
+    width: 20%; /* Set width of icon to 20% */
+    display: block;
+    margin: 0 auto 4%; /* Center the icon and add 4% space below it */
+}
+
+/* Aligning span tags to the right of p labels */
+.data p, .weather p {
+    display: inline-block;
+    width: 50%;
+    text-align: right;
+}
+
+.data span, .weather span {
+    display: inline-block;
+    width: 50%;
+    text-align: left;
+    font-weight: normal; /* Ensure the data in spans is not bold */
+}
+
+/* Footer styling */
+footer {
+    text-align: center;
+    padding: 10px 0;
+}
+
+footer p {
+    margin: 5px 0;
+}
+
+footer {
+    height: 20vh;
+    background-color: #006341; /* Beautiful Mexican green */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-align: center;
+}
+
+/* Hide .img-h1 for small screens */
+.img-h1 {
+    display: none;
 }

@@ -3,31 +3,51 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>WDD 131 - Media Query Example</title>
+    <title>course name - Media Query Example</title>
     <meta name="description" content="A collection of temple images.">
-    <meta name="author" content="Francisco J. Zuñiga S.">
+    <meta name="author" content="full name.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto&display=swap">
-    <link rel="stylesheet" href="styles/place.css">
-    <link rel="stylesheet" href="styles/place-large.css">
+    <link rel="stylesheet" href="styles/place-large.css" media="(min-width: 768px) ">
+    <link rel="stylesheet" href="styles/place.css" media="(max-width: 767px)">
     <script defer src="scripts/place.js"></script>
 </head>
 <body>
-    <header>
+    <header class="country">
         <h1>Country name</h1>
     </header>
     <main>
         <div class="hero">
             <picture>
-                <source srcset="images/tx-large.webp" media="(min-width: 1000px)">
-
+                <source srcset="images/tx-large.jpg" media="(min-width: 768px) ">
+                <source srcset="images/tx-small.jpg" media="(max-width: 767px)">
+                <img src="images/tx-fallback.jpg" alt="Description of the image">
             </picture>
+        </div>
+        <div class="data">
+            <h1>Data</h1>
+            <p>Population: </p><span>68,000</span>
+            <p>Area:</p><span>343² km</span>
+            <p>Capital: </p><span>Tequisquiapan</span>
+            <p>Languages: </p><span>Spanish</span>
+            <p>Currency: </p><span>Mexican Peso (MXN)</span>
+            <p>Time Zone: </p><span>(CST), UTC -6</span>
+            <p>Calling Code: </p><span>+52</span>
+            <p>Internet TLD: </p><span>.mx</span>
+        </div>
+        <div class="weather">
+            <h1>Weather  <picture class="img-h1"><img class="icon" src="images/sun.png" alt=""></picture></h1>
+            <picture class="img-box"><img class="icon" src="images/sun.png" alt=""></picture>
+            <p>Temperature: </p><span>27°C (81°F)</span>
+            <p>Conditions: </p><span>Partly cloudy</span>
+            <p>Wind: </p><span>15 km/h (9 mph) from the northeast</span>
+            <p>Wind Chill: </p><span>27°C (81°F)</span>
         </div>
     </main>
     <footer>
         <div class="footer-container">
-            <p> <span id="currentyear"></span> 🌵 Francisco J. Zuñiga S. - México 🌵 </p>
+            <p> <span id="currentyear"></span> 🌵 Full name  🌵 </p>
             <p>Last modification: <span id="date-and-time"></span></p>
         </div>
     </footer>

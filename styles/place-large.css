@@ -1,0 +1,138 @@
+/* Updated place-large.css */
+
+/* Basic reset and font styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+}
+
+/* Header styling */
+header.country {
+    height: 20vh;
+    background-color: #006341; /* Beautiful Mexican green */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-align: center;
+}
+
+/* Styling for hero image */
+.hero {
+    text-align: center;
+    position: relative;
+}
+
+.hero img {
+    max-width: 100%;
+    width: 100%;
+    height: auto;
+}
+
+/* Responsive box for .data class */
+.data {
+    background-color: rgba(128, 128, 128, 0.5); /* Transparent grey */
+    color: #fff; /* Responsive text color */
+    position: absolute;
+    top: calc(20vh + 1%); /* Adjusted to be relative to the header */
+    left: 10%;
+    padding: 20px;
+    width: 35%;
+    border-radius: 10px;
+    text-align: left; /* Align text to the left */
+}
+
+.data h1 {
+    background-color: rgba(206, 17, 38, 0.5); /* Transparent beautiful Mexican red */
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 8%; /* Space between h1 and p/span */
+}
+
+/* Aligning span tags to the right of p labels within .data */
+.data p {
+    display: inline-block;
+    width: 49%; /* Adjusting width to fit with span */
+    text-align: right;
+    font-weight: bold;
+    margin-bottom: 1%; /* Space between lines of p/span */
+}
+
+.data span {
+    display: inline-block;
+    width: 49%; /* Adjusting width to fit with p */
+    text-align: left;
+    font-weight: normal; /* Ensure the data in spans is not bold */
+}
+
+/* Responsive box for .weather class */
+.weather {
+    background-color: rgba(128, 128, 128, 0.5); /* Same color as .data */
+    color: #fff; /* Responsive text color */
+    position: absolute;
+    bottom: 5%; /* 5% space from the bottom of main */
+    right: 10%;
+    padding: 20px;
+    width: 35%;
+    border-radius: 10px;
+    text-align: left; /* Align text to the left */
+}
+
+.weather h1 {
+    background-color: rgba(206, 17, 38, 0.5); /* Transparent beautiful Mexican red */
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 8%; /* Space between h1 and p/span */
+    display: flex;
+    align-items: center; /* Center align icon and text vertically */
+}
+
+.weather .icon {
+    width: 10%; /* 10% of the width size */
+    height: auto;
+    margin-right: 10px; /* Space between the icon and the h1 text */
+}
+
+/* Hide .img-box for large screens */
+.img-box {
+    display: none;
+}
+
+/* Aligning span tags to the right of p labels within .weather */
+.weather p {
+    display: inline-block;
+    width: 49%; /* Adjusting width to fit with span */
+    text-align: right;
+    font-weight: bold;
+    margin-bottom: 1%; /* Space between lines of p/span */
+}
+
+.weather span {
+    display: inline-block;
+    width: 49%; /* Adjusting width to fit with p */
+    text-align: left;
+    font-weight: normal; /* Ensure the data in spans is not bold */
+}
+
+/* Footer styling */
+footer {
+    text-align: center;
+    padding: 10px 0;
+    height: 20vh;
+    background-color: #006341; /* Beautiful Mexican green */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-align: center;
+}
+
+footer p {
+    margin: 5px 0;
+}
