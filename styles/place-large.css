@@ -1,5 +1,5 @@
 /* Updated place-large.css */
-
+@media (min-width: 768px) {
 /* Basic reset and font styling */
 * {
     margin: 0;
@@ -135,4 +135,5 @@ footer {
 
 footer p {
     margin: 5px 0;
+}
 }

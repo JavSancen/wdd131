@@ -1,5 +1,11 @@
 /* place-small.css */
 
+/* Define global variables using :root */
+:root {
+    --main-color: #006341; /* main color variable */
+    --icon-width: 20%; /* icon width variable */
+}
+
 /* Basic reset and font styling */
 * {
     margin: 0;
@@ -15,7 +21,7 @@ body {
 /* Header styling */
 header.country {
     height: 20vh;
-    background-color: #006341; /* Beautiful Mexican green */
+    background-color: var(--main-color); /* Using main color variable */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -55,7 +61,7 @@ main h1 {
 
 /* Styling for icon image */
 img.icon {
-    width: 20%; /* Set width of icon to 20% */
+    width: var(--icon-width); /* Set width of icon using variable */
     display: block;
     margin: 0 auto 4%; /* Center the icon and add 4% space below it */
 }
@@ -86,7 +92,7 @@ footer p {
 
 footer {
     height: 20vh;
-    background-color: #006341; /* Beautiful Mexican green */
+    background-color: var(--main-color); /* Using main color variable */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -97,4 +103,13 @@ footer {
 /* Hide .img-h1 for small screens */
 .img-h1 {
     display: none;
+}
+
+/* Using ::after pseudo-element */
+footer::after {
+    content: 'Footer content goes here';
+    display: block;
+    font-style: italic;
+    margin-top: 10px;
+    color: #999; /* Light gray color for the content */
 }
