@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta description="WDD 131 - Dynamic Web Fundamentals">
+    <meta autor="Francisco J. Zúñiga S.">
+    <title>WDD 131 - Dynamic Web Fundamentals - Francisco J. Zúñiga S. 🌵</title>
+    <link rel="stylesheet" href="./styles/form.css">
+    <link rel="stylesheet" href="./Week01/styles/styles-600.css" media="screen and (min-width: 400px max-width:500px)">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <script src="./scripts/form.js"></script>
+</head>
+<body class="container">
+    <header >
+        <div class="header-container">
+            <div class="title-container">
+                <h1 class=".title-header-name">Product Review</p>
+            </div>
+        </div>
+
+    </header>
+    <main>
+        <form id="review-form" method="get" action="review.html">
+            <h2 style="grid-column: span 2;">Product Review Form</h2>
+
+            <!-- Product Name Section -->
+            <label for="product-name">Product Name:</label>
+            <select id="product-name" name="product-name" required>
+                <option value="" disabled selected>Select a product</option>
+            </select>
+
+            <!-- Overall Rating Section -->
+            <fieldset>
+                <legend>Overall Rating:</legend>
+                <label for="rating-1">1</label>
+                <input type="radio" id="rating-1" name="rating" value="1" required>
+                <label for="rating-2">2</label>
+                <input type="radio" id="rating-2" name="rating" value="2" required>
+                <label for="rating-3">3</label>
+                <input type="radio" id="rating-3" name="rating" value="3" required>
+                <label for="rating-4">4</label>
+                <input type="radio" id="rating-4" name="rating" value="4" required>
+                <label for="rating-5">5</label>
+                <input type="radio" id="rating-5" name="rating" value="5" required>
+            </fieldset>
+
+            <!-- Date of Installation Section -->
+            <label for="installation-date">Date of Installation:</label>
+            <input type="date" id="installation-date" name="installation-date" required>
+
+            <!-- Useful Features Section -->
+            <fieldset>
+                <legend>Useful Features:</legend>
+                <label for="feature-1">Feature 1</label>
+                <input type="checkbox" id="feature-1" name="features" value="Feature 1">
+                <label for="feature-2">Feature 2</label>
+                <input type="checkbox" id="feature-2" name="features" value="Feature 2">
+                <label for="feature-3">Feature 3</label>
+                <input type="checkbox" id="feature-3" name="features" value="Feature 3">
+            </fieldset>
+
+            <!-- Written Review Section -->
+            <label for="written-review">Written Review:</label>
+            <textarea id="written-review" name="written-review"></textarea>
+            
+            <!-- User Name Section -->
+            <label for="user-name">User Name:</label>
+            <input type="text" id="user-name" name="user-name">
+            
+            <!-- Form Submission Button -->
+            <input type="submit" value="Submit Review">
+        </form>
+    </main>
+    <footer>
+        <div class="footer-container">
+            <p> <span id="currentyear" ></span> 🌵 Francisco J. Zúñiga S. 🌵 México </p>
+            <p>Last modification: <span id="date-and-time"></span></p>
+        </div>
+
+    </footer>
+</body>
+</html>
