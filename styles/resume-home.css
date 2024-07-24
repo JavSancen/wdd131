@@ -21,31 +21,20 @@ body {
     max-width: 400px;
     margin: 0 auto;
     display: grid;
-    grid-template-rows: auto 80vh auto;
+    grid-template-rows: auto 1fr auto;
+    padding: 2rem;
 }
 /*-----All Related to the HEADER-----*/
 header {
-    box-sizing: border-box;
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-auto-rows: 1;
+    display: flex;
+    justify-content: space-between;
     align-items: center;
-    align-content: end;
-    padding-left: 10%;
-    padding-right: 10%;
-    height: auto;
+    padding: 1rem 10%;
 }
 .resume {
-    grid-column: 1/2;
-    grid-row: 1;
-    justify-self: start;
-    align-items: center;
     font-size: 2rem;
     font-weight: 600;
-}
-.resume {
-    transition-property: transform;
-    transition: 1s ease;
+    position: relative;
 }
 .resume::after {
     content: '';
@@ -54,28 +43,14 @@ header {
     width: 100%;
     display: block;
     transform: rotateY(90deg);
-    transition:transform .80s linear;
-  }
-  .resume:active {
-    transform: scale(1);
-  }
-  .resume:active::after {
+    transition: transform .80s linear;
+}
+.resume:active::after {
     transform: rotate(0deg);
-  }
-.telegram {
-    justify-self: end;
-    align-items: center;
-    grid-column: 2/3;
-    grid-row: 1;
 }
-.telegram img {
+.telegram img,
+.home-resume img {
     width: 60px;
-}
-.home-resume {
-    justify-self: end;
-    align-items: center;
-    grid-column: 2/3;
-    grid-row: 1;
 }
 .home-resume img {
     width: 40px;
@@ -84,365 +59,225 @@ header {
 /*-----All Related to the MAIN-----*/
 main {
     display: grid;
-    grid-template-columns: 1;
-    grid-auto-rows: 25% 120px 25px 55px 30px 25%;
-    height: auto;
+    grid-template-rows: 1fr auto auto auto 1fr;
+    gap: 1rem;
+    padding: 1rem 10%;
 }
 .brand {
-    grid-row: 2/3;
-    justify-content: start;
-    padding-left: 20%;
+    display: flex;
+    justify-content: center;
 }
 .brand img {
-    width: 40%;
+    width: 50%;
 }
 .title {
-    grid-row: 3/4;
-    padding-left: 18%;
-    height: 1rem;
-    font-size: 1rem;
+    font-size: 1.6rem;
     color: #F69D17;
+    text-align: center;
 }
 .presentation {
-    grid-row: 4/5;
-    width: 80%;
-    padding-left: 18%;
-    font-size: 1.2rem;
+    font-size: 1.4rem;
     text-align: justify;
     color: azure;
-    
+}
+.work-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 .work {
-    grid-row: 5/6;
-    width: 20%;
-    height: 100%;
-    font-size: 1rem;
+    font-size: 1.4rem;
     text-align: center;
-    color: azure;
-}
-.work {
-    border: 2px solid #d9d9da;
-    margin-left: 18%;
-}
-.work {
     cursor: pointer;
     outline: none;
-    border: none;
+    border: 2px solid #d9d9da;
     border-radius: 15px;
     box-shadow: 0 9px #999;
-  }
-  
-  .work:hover {
-    background-color: #F69D17
-  }
-  
-  .work:active {
+    padding: 0.5rem 1rem;
+    transition: background-color 0.3s, box-shadow 0.3s, transform 0.3s;
+}
+.work:hover,
+.work:active {
     background-color: #F69D17;
     box-shadow: 0 5px #666;
     transform: translateY(4px);
-  }
-/*Card Slide Container for Know my Work*/
-.works-container--slider {
-    display: flex;
-    align-items: end ;
-    height: 400px;
-    overflow-x: scroll;
-    overscroll-behavior-x: contain;
-    scroll-snap-type: x proximity;
-  }
-  
-.works-container--card {
-    position: relative;
-    scroll-snap-align: center;
-    width: 70%;
-    min-width: 190px;
-    max-width: 300px;
-    height: 250px;
-    margin: 50px 5px 0;
-    padding: 0 15px;
-    border-radius: 15px;
-    box-shadow: 0 4px 8px rgba(89,73,30,0.16);
-  }
-  .work-card--title {
-    padding-top: 30px;
-    font-size: 1.8rem;
-    font-weight: 600;
-    line-height: 1.8rem;
-    color: black;
-}
-.work-card--img {
-    padding: 5px 0;
-    font-size: 3rem;
-    font-weight: bold;
-    line-height: 5.3rem;
-    color: black;
-}
-.work-card--img img {
-    margin-top: 20px;
-    margin-bottom: 20px;
 }
 
-.card2 img {
-    justify-self: center;
-}
-
-.work-card-description {
-    font-size: 1.2rem;
-    color: #3a3939; 
-}
-.work-card--button {
-    width: 100px;
-    height: 30px;
-    margin-top: 20px;
-    background-color: #faf8f7;
-    border: 2px solid orange;
-    border-radius: 4px;
-    font-family: 'DM Sans', sans-serif;
-    font-size: 1rem;
-    font-weight: bold;
-    line-height: 1.8rem;
-    color: black;
-}
-
-.card1  button{
-    margin-left: 18%;
-}
-
-.card2  button{
-    margin-left: 18%;
-}
-
-.card3  button{
-    margin-left: 18%;
-}
-
-.card1 {
-    background-color: #7734fb;
-}
-
-
-.card1 h3{
+/*-----All Related to the FOOTER-----*/
+footer {
     text-align: center;
-}
-
-.card2 {
-    background-color:#f6e317;
-}
-
-.card2 h3{
-    text-align: center;
-}
-
-.card3 {
-    background-color: #febf71;
-}
-
-.card3 h3{
-    text-align: center;
+    color: azure;
+    padding: 1rem 0;
 }
 
 /*-----All Related to the RESUME PAGE-----*/
 
-.resume-header { 
+.resume-header {
     display: flex;
+    align-items: center;
     height: 80px;
-    background-color: #545454;
+    background-color: #333; /* Darker background for better contrast */
+    padding: 0 20px; /* Add padding for whitespace */
 }
 
-.titleandname h1{
-    padding-left: 90px;
-    margin-right: 0;
-    padding-right: 0;
-    background-color: #545454;
+.titleandname {
+    display: flex;
+    flex-direction: column;
+    color: #faf8f7; /* Consistent text color */
 }
+
+.titleandname h1, .titleandname h3 {
+    margin: 0;
+    padding: 0;
+}
+
 .titleandname h1 {
-    font-size: 1.3rem;
+    font-size: 1.5rem;
 }
+
 .titleandname h3 {
-    padding-left: 90px;
-    background-color: #545454;
-    margin-left: 5px;
-    font-size: 1rem;
+    font-size: 1.2rem;
     font-weight: 300;
 }
-.resume-picture img{
-    position: absolute;
+
+.resume-picture img {
+    margin-left: auto; /* Aligns the image to the right within the header */
     width: 120px;
-    margin: 0;
-    padding-left: 0;
-    margin-left: -35px;
-    margin-top: -35px;
     border-radius: 60px;
 }
-.home img{
-    position: absolute;
+
+.home img {
     width: 20px;
-    align-items: start;
-    margin-top: 10px;
-    margin-left: 15px;
-    background-color: #545454;
+    margin: 10px 0 0 15px;
 }
+
 /*-----All Related to MAIN-RESUME-PAGE-----*/
 .main-resume {
-    height: auto;
-    margin-bottom: 2%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px; /* Add gap for better spacing */
+    margin: 20px;
 }
-.main-resume {
-    grid-template-columns: 50% 50%;
-    grid-template-rows: auto auto auto auto auto;
-}
+
 .youtube {
-    grid-row: 1/2;
-    grid-column: 2/3;
-    justify-self: right;
+    grid-column: 2;
+    justify-self: end;
     align-self: center;
-    margin-right: 40%;
-    /* padding-bottom: 1%; */
+    margin-right: 20px;
 }
+
 .youtube a {
-    margin-top: -1%;
+    display: block;
     text-align: left;
+    color: azure; /* Ensure link color is consistent */
 }
+
 .span-yt {
-    position:absolute;
-    margin-top: 3%;
+    position: relative;
+    margin-top: 10px;
 }
-.youtube img {
-    padding-left: 5%;
-}
-span {
-    color: azure;
-}
-.objective {
-    /* margin-top: -1%; */
-    align-self: center;
-    margin-left: 3%;
-    margin-right: 3%;
-    text-align: justify;
-    grid-column: 1/3;
-    grid-row: 2/3;
-}
-.objective h2 {
-    padding-bottom: 1%;
-}
-.objective p {
-    margin-bottom: 3%;
-}
-.skills {
-    /* margin-top: 1%; */
-    padding-top: 2%;
-    align-self: center;
-    display: grid;
-    grid-column: 1/3;
-    grid-row: 3/4;
-    background-color: #242424;
-}
-.skills ul li {
-    height: auto;
-    list-style: none;
-    text-align: center;
-    background-color: #242424;
-}
-.skills h2 {
-    text-align: center;
-    padding-bottom: 1%;
-    background-color: #242424; 
-}
-.prof-skills {
-    grid-column: 1/2;
-    grid-row: 3/4;
-}
-.soft-skills {
-    grid-column: 2/3;
-    grid-row: 3/4;
-}
-.achievements {
-    grid-column: 1/3;
-    grid-row: 4/5;
-    align-self: center;
-    margin-left: 2%;
-    margin-right: 2%;
-}
-.achievements h2 {
-    padding-top: 3%;
-    padding-bottom: 1%;
-}
-.achievements p {
-    text-align: justify;
-    padding-bottom: 2%;
-}
-.studies {
-    height: auto;
-    grid-column: 1/3;
-    grid-row: 5/6;
-    align-self: center;
-    padding-left: 2%;
-    padding-right: 2%;
-    background-color: #242424;
-}
-.studies h2{
-    padding-bottom: 1%;
-    padding-top: 2%;
-    background-color: #242424;
-}
-.studies p {
-    text-align: justify;
-    background-color: #242424;
-    padding-bottom: 2%;
-}
-/*-----All Related to the FOOTER-----*/
-footer {
-    display: grid;
-    grid-template-columns: 2;
-    grid-auto-rows: 2;
-    align-items: center;
-    align-content: start;
-    padding-left: 10%;
-    padding-right: 10%;
-    height: auto;
-}
-.social {
-    grid-column: 1/2;
-    grid-row: 1/2;
-}
-.social img {
-    width: 20px;
-}
-.name {
-    color: azure;
-}
-.am {
-    grid-column: 2/3;
-    text-align: end;
-    color: azure;
-}
-.am img {
-    width: 20px;
-}
-/*MAIN section for RESUME page*/
-.titleandname {
-    color: azure;
-}
+
 .youtube img {
     width: 50px;
 }
-.objective {
-    color: azure;
-}
-.skills {
-    color: azure;
-}
-.achievements {
-    color: azure;
-}
-.studies {
-    color: azure;
-}
-a {
-    text-decoration: none;
-    color: azure;
+
+span, .name, .am, .objective, .skills, .achievements, .studies, a {
+    color: #faf8f7;
 }
 
+.objective {
+    grid-column: 1 / -1; /* Span across both columns */
+    text-align: justify;
+    padding: 0 20px;
+}
+
+.objective h2 {
+    padding-bottom: 10px;
+}
+
+.objective p {
+    margin-bottom: 20px;
+}
+
+.skills {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-column: 1 / -1;
+    background-color: #242424;
+    padding: 20px;
+}
+
+.skills ul li, .skills h2, .studies, .studies h2, .studies p {
+    background-color: #242424;
+}
+
+.skills ul li {
+    list-style: none;
+    text-align: center;
+}
+
+.skills h2 {
+    text-align: center;
+    padding-bottom: 10px;
+}
+
+.prof-skills, .soft-skills {
+    padding: 10px;
+}
+
+.achievements {
+    grid-column: 1 / -1;
+    text-align: justify;
+    padding: 0 20px;
+}
+
+.achievements h2 {
+    padding-top: 20px;
+    padding-bottom: 10px;
+}
+
+.achievements p {
+    padding-bottom: 20px;
+}
+
+.studies {
+    grid-column: 1 / -1;
+    text-align: justify;
+    padding: 0 20px;
+}
+
+.studies h2 {
+    padding-top: 20px;
+    padding-bottom: 10px;
+}
+
+.studies p {
+    padding-bottom: 20px;
+}
+
+/*-----All Related to the FOOTER-----*/
+footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #333; /* Darker background for footer */
+}
+
+.social img, .am img {
+    width: 20px;
+}
+
+.am {
+    text-align: end;
+}
+
+/*MAIN section for RESUME page*/
+.titleandname, .objective, .skills, .achievements, .studies, a {
+    color: #faf8f7;
+}
+
+/* Friend Form */
 .friend-form {
     margin: 20px 0;
     text-align: center;
@@ -450,6 +285,7 @@ a {
 
 .friend-form label {
     font-size: 1.2em;
+    color: #faf8f7; /* Consistent text color */
 }
 
 .friend-form input {
@@ -458,19 +294,23 @@ a {
     font-size: 1em;
     width: 80%;
     max-width: 300px;
+    border: 1px solid #ccc; /* Add border for better input visibility */
+    border-radius: 5px; /* Rounded corners for inputs */
 }
 
 .friend-form button {
     padding: 10px 20px;
     font-size: 1em;
-    background-color: white;
-    color: black;
+    background-color: #faf8f7; /* Button background matches text color */
+    color: #333; /* Dark text color for contrast */
     border: none;
     cursor: pointer;
+    border-radius: 5px; /* Rounded corners for button */
 }
 
 .friend-form button:hover {
     background-color: gray;
+    color: #faf8f7; /* Invert text color on hover for better contrast */
 }
 
 .welcome-message {
@@ -496,10 +336,10 @@ a {
         grid-template-rows: auto 1fr auto;
     }
 
-    header {
+    header,
+    footer {
         grid-template-columns: repeat(3, 1fr);
-        padding-left: 5%;
-        padding-right: 5%;
+        padding: 0 5%;
     }
 
     .resume {
@@ -525,12 +365,18 @@ a {
         padding: 2% 5%;
     }
 
-    .brand {
-        grid-row: 1;
+    .brand,
+    .title,
+    .presentation,
+    .work {
         grid-column: 1 / 2;
         padding-left: 0;
-        padding-right: 5%;
         text-align: center;
+    }
+
+    .brand {
+        grid-row: 1;
+        padding-right: 5%;
     }
 
     .brand img {
@@ -539,18 +385,13 @@ a {
 
     .title {
         grid-row: 2;
-        grid-column: 1 / 2;
-        padding-left: 0;
         padding-right: 5%;
         font-size: 1.5rem;
         height: 8%;
-        text-align: center;
     }
 
     .presentation {
         grid-row: 3;
-        grid-column: 1 / 2;
-        padding-left: 0;
         padding-right: 5%;
         font-size: 2rem;
         width: 36%;
@@ -559,11 +400,9 @@ a {
 
     .work {
         grid-row: 4;
-        grid-column: 1 / 2;
         width: 10%;
         height: 10%;
         margin-left: 0;
-        text-align: center;
     }
 
     .works-container--slider {
@@ -597,11 +436,5 @@ a {
     .studies {
         grid-column: 1 / 3;
         padding: 0 5%;
-    }
-
-    footer {
-        grid-template-columns: 1fr 1fr;
-        padding-left: 5%;
-        padding-right: 5%;
     }
 }
