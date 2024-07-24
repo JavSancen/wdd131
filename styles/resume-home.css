@@ -264,12 +264,30 @@ footer {
     background-color: #333; /* Darker background for footer */
 }
 
+footer p {
+    background-color: #333; /* Darker background for footer */
+}
+
+footer span {
+        background-color: #333; /* Darker background for footer */
+}
+
+footer div {
+    background-color: #333; /* Darker background for footer */
+
+}
+
 .social img, .am img {
     width: 20px;
+    background-color: #333; /* Darker background for footer */
+
 }
 
 .am {
     text-align: end;
+}
+
+.social .name {
 }
 
 /*MAIN section for RESUME page*/
