@@ -442,28 +442,51 @@ a {
     text-decoration: none;
     color: azure;
 }
-/*@media screen and (min-width: 400px) {
-    .work {
-        grid-row: 5/6;
-        width: 20%;
-        height: 100%;
-        font-size: 1rem;
-        text-align: center;
-        color: azure;
-    }
 
-    .work {
-        border: 2px solid #d9d9da;
-        border-radius: 20px;
-        margin-left: 18%;
-        padding-top: 1%;
-    }
-    main {
-        display: grid;
-        grid-template-columns: 1;
-        grid-auto-rows: 30% 140px 25px 55px 40px 30%;
-    }
-}*/
+.friend-form {
+    margin: 20px 0;
+    text-align: center;
+}
+
+.friend-form label {
+    font-size: 1.2em;
+}
+
+.friend-form input {
+    padding: 10px;
+    margin: 10px 0;
+    font-size: 1em;
+    width: 80%;
+    max-width: 300px;
+}
+
+.friend-form button {
+    padding: 10px 20px;
+    font-size: 1em;
+    background-color: white;
+    color: black;
+    border: none;
+    cursor: pointer;
+}
+
+.friend-form button:hover {
+    background-color: gray;
+}
+
+.welcome-message {
+    font-size: 1.5em;
+    color: #faf8f7;
+    margin: 20px 0;
+    display: none;
+}
+
+.instruction {
+    color: #faf8f7;
+}
+
+.inputName {
+    color: #faf8f7;
+}
 
 @media screen and (min-width: 1024px) {
     body {

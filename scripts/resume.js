@@ -16,3 +16,16 @@ document.addEventListener('DOMContentLoaded', () => {
     });
     document.getElementById('date-and-time').textContent = formattedLastModified;
 });
+
+// resume.js
+document.addEventListener('DOMContentLoaded', () => {
+    const form = document.getElementById('friendForm');
+    const welcomeMessage = document.getElementById('welcomeMessage');
+
+    form.addEventListener('submit', (event) => {
+        event.preventDefault();
+        const friendName = document.getElementById('friendName').value;
+        welcomeMessage.textContent = `Nice to meet you, ${friendName}`;
+        welcomeMessage.style.display = 'block';
+    });
+});
